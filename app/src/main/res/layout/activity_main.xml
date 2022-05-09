@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Loan Amount"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <EditText
+            android:layout_width="230dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="3dp"
+            android:id="@+id/amount_edt"
+            android:inputType="number"
+            android:layout_marginLeft="20dp"
+            android:hint="Enter The Amount "
+            android:textColorHint="#6E6E6E"
+            android:textColor="@color/black"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Interest%"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <EditText
+            android:layout_width="230dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="3dp"
+            android:inputType="number"
+            android:id="@+id/interst_edt"
+            android:layout_marginLeft="20dp"
+            android:hint="Enter The Interest"
+            android:textColorHint="#6E6E6E"
+            android:textColor="@color/black"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Period "
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <EditText
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="3dp"
+            android:id="@+id/year_edt"
+            android:layout_marginLeft="20dp"
+            android:hint="Years"
+            android:inputType="number"
+            android:textColorHint="#6E6E6E"
+            android:textColor="@color/black"
+            />
+        <EditText
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="15dp"
+            android:hint="Months"
+            android:id="@+id/month_edt"
+            android:inputType="number"
+            android:textColorHint="#6E6E6E"
+            android:textColor="@color/black"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="125dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="EMI"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:id="@+id/emi_text"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+
+
+        <View
+            android:layout_marginLeft="174dp"
+            android:layout_width="221dp"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        >
+
+        <Button
+            android:layout_marginRight="5dp"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="50dp"
+            android:text="Calculate"
+            android:id="@+id/cal_btn"
+            android:textSize="13dp"
+            android:textColor="@color/white"
+            android:backgroundTint="#0081B4"
+            />
+        <Button
+            android:layout_marginRight="5dp"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="50dp"
+            android:text="Reset"
+            android:textSize="15dp"
+            android:textColor="@color/white"
+            android:backgroundTint="#0081B4"
+            />
+        <Button
+            android:layout_marginRight="5dp"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="50dp"
+            android:text="Details"
+            android:textSize="15dp"
+            android:textColor="@color/white"
+            android:backgroundTint="#0081B4"
+            />
+    </LinearLayout>
+    <TableLayout
+        android:id="@+id/table_tbl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0,1,2"
+        android:gravity="center"
+        android:layout_marginLeft="30dp">
+
+        <TableRow
+            android:background="#0081B4"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_margin="1dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="20dp"
+                android:text=" Monthly EMI "
+                android:textColor="#000"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center" />
+
+            <TextView
+
+                android:id="@+id/monthly_emi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"/>
+
+        </TableRow>
+
+        <TableRow
+            android:background="#0081B4"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_margin="1dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="20dp"
+                android:text=" Total Interest "
+                android:textColor="#000"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center" />
+            <TextView
+                android:id="@+id/total_interest"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"/>
+
+        </TableRow>
+
+
+
+        <TableRow
+            android:background="#0081B4"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_margin="1dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text=" Total Payment "
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center" />
+            <TextView
+                android:id="@+id/total_payment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"/>
+
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
